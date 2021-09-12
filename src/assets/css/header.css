@@ -1,0 +1,17 @@
+#mainHeader {    
+    text-align: center;
+    top: 0px;
+    width: 100vw;
+    height: 100px;
+    z-index: 2;
+    margin-bottom: 50px;
+    background-color: #17191a;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+#headerText {
+    color: var(--white);
+}

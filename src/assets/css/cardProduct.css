@@ -1,0 +1,74 @@
+:root {
+    --deepReed: #982121;
+    --orange: #ff611d;
+    --branco: white;
+    --brightRed: #e32929;
+    --yellow: #ffb80e;
+    --brown: #813531;
+    /* --fonte_titulo: 'Nunito', sans-serif; */
+    --fontTitle: 'Segoe UI';
+    --fontText: 'Vollkorn', serif;
+    --white: white;
+    
+}
+
+.containerCardProduct {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.cardProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px, 80px, 20px, 20px;
+    -webkit-box-shadow: 0px 0px 14px -3px #000000;
+    box-shadow: 0px 0px 14px -3px #000000;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    width: 300px;
+    transition: all 0.1s ease;
+    background-color: white;
+}
+
+.cardProduct:hover {
+    box-shadow: 0px 0px 30px -3px grey;
+
+}
+
+.nameProduct {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.cardProduct .cardPrice {
+    display: flex;
+    align-self: flex-start;
+    margin-left: 20px;
+    font-size: 20px;
+    color: green;
+}
+
+.nameProduct {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cardProduct .imgRetangularCard {
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.imgRetangularCard img {
+    width: 300px;
+    height: 150px;
+    object-fit: fill;
+}

@@ -1,0 +1,26 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 90vh;
+}
+
+:root {
+    --deepRed: #982121;
+    --orange: #ff611d;
+    --branco: white;
+    --brightRed: #e32929;
+    --yellow: #ffb80e;
+    --brown: #813531;
+    /* --fonte_titulo: 'Nunito', sans-serif; */
+    --fontTitle: 'Segoe UI';
+    --fontText: 'Vollkorn', serif;
+    --white: white;
+}
+
+#App {
+    height: 90vh;    
+}

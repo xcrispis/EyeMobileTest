@@ -33,8 +33,8 @@ const CardModal = ({ handleClose, show, data }) => {
 
     const decrease = () => {
         if (count === 1)
-            return
-
+            return;
+            
         setCount(count - 1)
         setValue(Math.round((data.priceProduct * count) * 100) / 100);
     }

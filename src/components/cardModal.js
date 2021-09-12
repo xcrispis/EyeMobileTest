@@ -34,7 +34,7 @@ const CardModal = ({ handleClose, show, data }) => {
     const decrease = () => {
         if (count === 1)
             return
-            
+
         setCount(count - 1)
         setValue(Math.round(value - data.priceProduct));
     }
@@ -90,7 +90,7 @@ const CardModal = ({ handleClose, show, data }) => {
 
 
 
-                    <Button size="medium" variant="contained" color="secondary" onClick={confirm}>Adicionar R${Math.round(data.priceProduct * count)}</Button>
+                    <Button size="medium" variant="contained" color="secondary" onClick={confirm}>Adicionar R${Math.round((data.priceProduct * count) * 100) / 100}</Button>
 
                 </div>
 

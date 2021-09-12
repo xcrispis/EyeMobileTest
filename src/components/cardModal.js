@@ -13,7 +13,7 @@ import CloseIcon from '@material-ui/icons/Close';
 const CardModal = ({ handleClose, show, data }) => {
 
     const showHideClassName = show ? "modal display-block" : "modal display-none";
-    let [value, sumValue] = useState(data.priceProduct);
+    let [value, setValue] = useState(data.priceProduct);
     let [count, setCount] = useState(1);
     let [finalValue, setFinalValue] = useState(0);
     let [finalAmount, setFinalAmount] = useState(1);
@@ -28,12 +28,12 @@ const CardModal = ({ handleClose, show, data }) => {
 
     const increment = () => {
         setCount(count + 1)
-        sumValue(Math.round(count * data.priceProduct));
+        setValue(Math.round(value + data.priceProduct));
     }
 
     const decrease = () => {
         setCount(count - 1)
-        sumValue(Math.round(count * data.priceProduct));
+        setValue(Math.round(value - data.priceProduct));
     }
 
     const confirm = () => {
@@ -53,14 +53,14 @@ const CardModal = ({ handleClose, show, data }) => {
         setFinalValue(0);
         setFinalAmount(1);
         setCount(1)
-        sumValue(Math.round(count * data.priceProduct));
+        setValue(Math.round(count * data.priceProduct));
         handleClose();
         alert("Item adicionado com sucesso.");
     }
 
 
     const close = () => {
-        sumValue(data.priceProduct);
+        setValue(data.priceProduct);
         setCount(1);
     }
 

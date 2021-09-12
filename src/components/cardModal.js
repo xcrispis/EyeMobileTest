@@ -18,6 +18,7 @@ const CardModal = ({ handleClose, show, data }) => {
     let [finalValue, setFinalValue] = useState(0);
     let [finalAmount, setFinalAmount] = useState(1);
     let [txt, setTxt] = useState("");
+    let currentValue = (Math.round((data.priceProduct * count) * 100) / 100);
 
     let orderItem = {
         itemName: "",
@@ -28,7 +29,7 @@ const CardModal = ({ handleClose, show, data }) => {
 
     const increment = () => {
         setCount(count + 1)
-        setValue(Math.round((data.priceProduct * count) * 100) / 100);
+        setValue(currentValue);
     }
 
     const decrease = () => {
@@ -36,7 +37,7 @@ const CardModal = ({ handleClose, show, data }) => {
             return;
             
         setCount(count - 1)
-        setValue(Math.round((data.priceProduct * count) * 100) / 100);
+        setValue(currentValue);
     }
 
     const confirm = () => {
@@ -44,7 +45,7 @@ const CardModal = ({ handleClose, show, data }) => {
         setFinalAmount(finalAmount + count);
         orderItem.itemName = data.productName;
         orderItem.itemAmount = finalAmount;
-        orderItem.itemValue = finalValue;
+        orderItem.itemValue = currentValue;
 
         let tempArray = [];
         orderItem.comment = txt;
@@ -90,7 +91,7 @@ const CardModal = ({ handleClose, show, data }) => {
 
 
 
-                    <Button size="medium" variant="contained" color="secondary" onClick={confirm}>Adicionar R${Math.round((data.priceProduct * count) * 100) / 100}</Button>
+                    <Button size="medium" variant="contained" color="secondary" onClick={confirm}>Adicionar R${currentValue}</Button>
 
                 </div>
 

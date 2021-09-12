@@ -31,6 +31,11 @@ const CardModal = ({ handleClose, show, data }) => {
         sumValue(Math.round(count * data.priceProduct));
     }
 
+    const decrease = () => {
+        setCount(count - 1)
+        sumValue(Math.round(count * data.priceProduct));
+    }
+
     const confirm = () => {
         setFinalValue(finalValue + value);
         setFinalAmount(finalAmount + count);
@@ -74,7 +79,7 @@ const CardModal = ({ handleClose, show, data }) => {
                     <TextField onChange={e => setTxt({ txt: e.target.value })} id="multiline" label="Comentários Adicionais" />
                     <div className="priceAndAmountContainer">
                         <div className="plusMinusContainer">
-                            <RemoveIcon fontSize="large" onClick={increment}>Subtraia</RemoveIcon>
+                            <RemoveIcon fontSize="large" onClick={decrease}>Subtraia</RemoveIcon>
                             <p>{count}</p>
                             <AddIcon fontSize="large" onClick={increment} />
                         </div>

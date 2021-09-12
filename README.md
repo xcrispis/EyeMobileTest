@@ -2,7 +2,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-No diretorio do projeto, você pode rodar:
+No diretorio de origem, você pode rodar o seguinte comando para instalar as dependencias:
+npm install
+
+No diretorio do projeto, você pode rodar para iniciar o projeto:
 ### `npm start`
 
 Roda o app em modo de desenvolvimento.\

@@ -28,7 +28,7 @@ const CardModal = ({ handleClose, show, data }) => {
 
     const increment = () => {
         setCount(count + 1)
-        setValue(Math.round(value + data.priceProduct));
+        setValue(Math.round((data.priceProduct * count) * 100) / 100);
     }
 
     const decrease = () => {
@@ -36,7 +36,7 @@ const CardModal = ({ handleClose, show, data }) => {
             return
 
         setCount(count - 1)
-        setValue(Math.round(value - data.priceProduct));
+        setValue(Math.round((data.priceProduct * count) * 100) / 100);
     }
 
     const confirm = () => {
